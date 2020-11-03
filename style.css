@@ -5,6 +5,94 @@
 
 /* CHALLENGE 1 - Button Hover */
 
+button {
+border-width: 2px;
+border-color: #073B4C;
+color: #073B4C;
+text-align: center;
+font-size: 24px;
+font-weight: 600;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 60px;
+padding-right: 60px;
+}
+
+button:hover { 
+background-color: #118AB2;
+color: white;
+cursor: pointer;
+}
+
 /* CHALLENGE 2 - Oscillating Rectangles */
 
+.bar {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  background-color: #444444;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 60px;
+}
+.bar:first-of-type {
+  /* animation properties */
+  animation-name: oscillation;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+
+.bar:last-of-type {
+  /* animation properties */
+  animation-name: oscillation;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  animation-iteration-count: infinite; 
+
+}
+
+@keyframes oscillation{
+  25% {transform:translateX(200px)}
+  75% {transform:translateX(-200px)}
+}
+
 /* CHALLENGE 3 - Circle Wave */
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top:100px;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.circle:nth-of-type(1) {
+  background-color: #EF476F;
+  animation-delay: 0s;
+}
+.circle:nth-of-type(2) {
+  background-color: #FFD166;
+  animation-delay: 0.1s;
+}
+.circle:nth-of-type(3) {
+  background-color: #06D6A0;
+  animation-delay: 0.2s;
+}
+.circle:nth-of-type(4) {
+  background-color: #118AB2;
+  animation-delay: 0.3s;
+}
+.circle:nth-of-type(5) {
+  background-color: #073B4C;
+  animation-delay: 0.5s;
+}
+
+@keyframes bounce{
+  50% {transform:translateY(-100px)}
+  
+}
